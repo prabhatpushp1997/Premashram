@@ -1,0 +1,12 @@
+---
+layout: default
+title: Poems
+---
+
+<section class="posts">
+<ul>
+{% for poems in site.poems %}
+<li><a href="{{ site.baseurl }}{{ poems.url }}">{{ poems.title }}</a><time datetime="{{ poems.date | date_to_xmlschema }}">{{ poems.date | date: "%m-%d-%Y" }}</time><h6>Poem {{ forloop.index }}</h6></li>
+{% endfor %}
+</ul>
+</section>

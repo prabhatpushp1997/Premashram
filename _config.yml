@@ -1,20 +1,20 @@
 # Site settings
 title: Premashram # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  Premashram is a personal blog to express my feelings toward everything in this world. I will try to write daily and iff you have time you can read it. 
 lang: en-US # default lang
 timezone: Asia/Kolkata # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
 mode: light # default theme "dark" | "light"
+logo: /assets/img/avatar.jpg
 
 # Profile settings
 author:
   name: Prabhat Pushp # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
-  username: prabhat # general username
+    I am just a simple heart broken guy.
+  username: username # general username
   github: github_username # github username
   twitter: twitter_username # twitter username
   facebook: facebook_username # facebook username
@@ -32,6 +32,16 @@ fb_appid:
 collections:
   posts:
     output: true
+    permalink: /:slug
+  poems:
+    output: true
+    permalink: /poems/:slug
+  philosophy:
+    output: true
+    permalink: /philosophy/:slug
+  diary:
+    output: true
+    permalink: /diary/:slug
 
 # Markdown settings
 markdown: kramdown
@@ -89,3 +99,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
+
+#html compression
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]

@@ -1,0 +1,16 @@
+---
+title: My Diary
+permalink: /diary/
+layout: myPage
+description: This is my Daily Diary
+comments: false
+---
+
+{%- for diary in site.diary -%}
+<article class="post-item">
+  <span class="post-item-date">{{ diary.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ diary.url }}">{{ diary.title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}

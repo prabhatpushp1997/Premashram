@@ -1,0 +1,12 @@
+---
+layout: default
+title: Philosophy
+---
+
+<section class="posts">
+<ul>
+{% for philosophy in site.philosophy %}
+<li><a href="{{ site.baseurl }}{{ philosophy.url }}">{{ philosophy.title }}</a><time datetime="{{ philosophy.date | date_to_xmlschema }}">{{ philosophy.date | date: "%m-%d-%Y" }}</time><h6>Philosophy {{ forloop.index }}</h6></li>
+{% endfor %}
+</ul>
+</section>

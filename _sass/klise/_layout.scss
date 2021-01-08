@@ -275,13 +275,11 @@
   }
   span.footer_item {
     color: $black;
-    opacity: 0.8;
     font-weight: $bold-weight;
     font-size: $small-font-size;
   }
   a.footer_item {
     color: $black;
-    opacity: 0.8;
     text-decoration: none;
 
     &:not(:last-child) {
@@ -293,11 +291,17 @@
   }
 
   .footer_copyright {
-    font-size: $small-font-size - 1;
+    font-size: $small-font-size;
     margin-top: 3px;
     display: block;
     color: $gray;
-    opacity: 0.8;
+  }
+  .footer_copyright p{
+    margin: 0;
+  }
+  .footer_copyright span{
+    font-size: 20px;
+    vertical-align: middle;
   }
 }
 
