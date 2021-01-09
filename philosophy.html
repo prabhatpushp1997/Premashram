@@ -1,12 +1,16 @@
 ---
-layout: default
-title: Philosophy
+title: My Diary
+permalink: /diary/
+layout: myPage
+description: 
+comments: false
 ---
 
-<section class="posts">
-<ul>
-{% for philosophy in site.philosophy %}
-<li><a href="{{ site.baseurl }}{{ philosophy.url }}">{{ philosophy.title }}</a><time datetime="{{ philosophy.date | date_to_xmlschema }}">{{ philosophy.date | date: "%m-%d-%Y" }}</time><h6>Philosophy {{ forloop.index }}</h6></li>
-{% endfor %}
-</ul>
-</section>
+{%- for philosophy in site.philosophy -%}
+<article class="post-item">
+  <span class="post-item-date">{{ philosophy.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ philosophy.url }}">{{ philosophy.title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}

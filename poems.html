@@ -1,12 +1,16 @@
 ---
-layout: default
-title: Poems
+title: Kuch kavitayen
+permalink: /poems/
+layout: myPage
+description: 
+comments: false
 ---
 
-<section class="posts">
-<ul>
-{% for poems in site.poems %}
-<li><a href="{{ site.baseurl }}{{ poems.url }}">{{ poems.title }}</a><time datetime="{{ poems.date | date_to_xmlschema }}">{{ poems.date | date: "%m-%d-%Y" }}</time><h6>Poem {{ forloop.index }}</h6></li>
-{% endfor %}
-</ul>
-</section>
+{%- for poems in site.poems -%}
+<article class="post-item">
+  <span class="post-item-date">{{ poems.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ poems.url }}">{{ poems.title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}
